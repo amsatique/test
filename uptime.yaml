@@ -1,0 +1,7 @@
+---
+- hosts: all
+  tasks:
+     - name: Show uptime
+       shell: uptime
+       register: test
+     - debug: var="test.stdout_lines"
