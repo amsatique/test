@@ -5,12 +5,4 @@
        shell: uptime
        register: test
      - debug: var="test.stdout_lines"
-     
-     - shell: id
-     - shell: date
-     - yum: name={{item}} state=installed
-       with_items:
-           - python
-           - vnc
-           - telnet
-           - php
+
